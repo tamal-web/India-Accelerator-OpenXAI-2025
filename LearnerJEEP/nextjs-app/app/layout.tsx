@@ -1,39 +1,31 @@
-import { Metadata, Viewport } from "next";
-
-import { siteConfig } from "@/config/site";
+"use client";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
+// import { Nav } from "@/components/nav";
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
-  },
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-};
-
-interface RootLayoutProps {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}) {
   return (
-    <>
-      <html>
-        <head />
-        <body>{children}</body>
-      </html>
-    </>
+    <html suppressHydrationWarning>
+      <head></head>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex flex-row max-h-[100dvh] w-screen overflow-x-hidden overflow-y-hidden">
+            <main className="flex-1 max-h-[100dvh] flex flex-col overflow-x-hidden overflow-y-hidden">
+              {/* <Nav /> */}
+              {children}
+            </main>
+          </div>
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
