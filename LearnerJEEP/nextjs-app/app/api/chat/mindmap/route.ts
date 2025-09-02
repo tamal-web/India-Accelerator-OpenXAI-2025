@@ -1,9 +1,9 @@
-import { generateObject, streamObject, UIMessage } from "ai";
+import { streamObject, UIMessage } from "ai";
 import { createOpenAI } from "@ai-sdk/openai";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { convertToModelMessages } from "ai";
-import { uuidv4 } from "zod/v4";
+
 export const config = { runtime: "edge" };
 
 // import { z } from "zod";
