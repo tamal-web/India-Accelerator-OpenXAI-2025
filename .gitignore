@@ -91,9 +91,9 @@ dist
 
 # Gatsby files
 **/.cache/
-**/public
+# **/public
 .cache/
-public
+# public
 
 # Storybook build outputs
 **/.out
