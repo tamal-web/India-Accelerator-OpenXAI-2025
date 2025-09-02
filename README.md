@@ -4,7 +4,7 @@
 An AI-powered learning app that builds interactive roadmaps and mind maps tailored to what you want to learn. Explore each topic through visuals, earn points as you progress, and test your knowledge with quizzes and projects.<br><br>
 **LearnerJEEP**- a Next.js + Node.js app that talks to a locally-hosted AI model running on **Ollama**.
 This README keeps setup short and easy - get the app running in a few steps, and learn how to point it at your local Ollama instance.
-<br> <br>  
+<br>  
 
 [Demo Video](https://drive.google.com/file/d/1hb2Nd0rfc8jJiKIHvdWpJitv2E0XOMxI/view?usp=sharing)  
 
